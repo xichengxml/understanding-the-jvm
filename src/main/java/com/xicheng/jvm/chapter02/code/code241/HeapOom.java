@@ -1,4 +1,4 @@
-package com.xicheng.jvm.chapter02;
+package com.xicheng.jvm.chapter02.code.code241;
 
 import java.util.ArrayList;
 import java.util.List;
