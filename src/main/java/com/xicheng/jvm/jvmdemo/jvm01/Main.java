@@ -10,22 +10,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        CmdParser cmdParser = CmdParser.parse(args);
+        Args arguments = Args.parse(args);
 
-        if (!cmdParser.ok || cmdParser.helpFlag) {
+        if (!arguments.ok || arguments.helpFlag) {
             System.out.println("Usage: <main class> [-options] class [args...]");
             return;
         }
 
-        if (cmdParser.versionFlag) {
+        if (arguments.versionFlag) {
             System.out.println("java version \"1.8.0\"");
         }
-
-        startJVM(cmdParser);
-    }
-
-    private static void startJVM(CmdParser cmdParser) {
-        System.out.printf("classpath: %s, class: %s, args: %s\n", cmdParser.classpath, cmdParser.getMainClass(),
-                cmdParser.getAppArgs() + "");
     }
 }
