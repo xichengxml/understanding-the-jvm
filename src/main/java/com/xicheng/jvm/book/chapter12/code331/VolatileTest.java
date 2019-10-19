@@ -1,4 +1,4 @@
-package com.xicheng.jvm.book.chapter12.code.code331;
+package com.xicheng.jvm.book.chapter12.code331;
 
 /**
  * volatile变量自增测试

@@ -1,4 +1,4 @@
-package com.xicheng.jvm.book.chapter12.code.code370;
+package com.xicheng.jvm.book.chapter12.code370;
 
 /**
  * description

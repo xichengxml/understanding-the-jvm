@@ -1,4 +1,4 @@
-package com.xicheng.jvm.book.chapter12.code.code388;
+package com.xicheng.jvm.book.chapter12.code388;
 
 import java.util.Vector;
 
