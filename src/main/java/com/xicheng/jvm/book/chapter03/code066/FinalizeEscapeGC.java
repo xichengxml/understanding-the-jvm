@@ -1,4 +1,4 @@
-package com.xicheng.jvm.book.chapter03.code.code066;
+package com.xicheng.jvm.book.chapter03.code066;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

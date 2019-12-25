@@ -1,4 +1,4 @@
-package com.xicheng.jvm.book.chapter03.code.code062;
+package com.xicheng.jvm.book.chapter03.code062;
 
 /**
  * jvm参数

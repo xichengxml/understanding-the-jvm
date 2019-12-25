@@ -1,4 +1,4 @@
-package com.xicheng.jvm.book.chapter02.code.code243;
+package com.xicheng.jvm.book.chapter02.code243;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

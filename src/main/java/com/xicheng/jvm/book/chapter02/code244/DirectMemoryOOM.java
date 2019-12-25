@@ -1,4 +1,4 @@
-package com.xicheng.jvm.book.chapter02.code.code244;
+package com.xicheng.jvm.book.chapter02.code244;
 
 import sun.misc.Unsafe;
 
