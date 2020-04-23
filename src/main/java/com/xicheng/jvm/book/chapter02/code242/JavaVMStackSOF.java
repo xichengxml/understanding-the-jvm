@@ -1,5 +1,6 @@
 package com.xicheng.jvm.book.chapter02.code242;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,11 +10,10 @@ import org.slf4j.LoggerFactory;
  * @author xichengxml
  * @date 2019-08-17 06:27
  */
+@Slf4j
 public class JavaVMStackSOF {
 
     private static int stackLength = 1;
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(JavaVMStackSOF.class);
 
     private static void stackLeak() {
         stackLength++;
@@ -24,7 +24,7 @@ public class JavaVMStackSOF {
         try {
             stackLeak();
         } catch (Throwable e) {
-            LOGGER.error("error: {}, stackLength: {}", e, stackLength);
+            log.error("error: {}, stackLength: {}", e, stackLength);
         }
     }
 }

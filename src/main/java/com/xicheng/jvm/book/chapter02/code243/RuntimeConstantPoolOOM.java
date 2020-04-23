@@ -1,5 +1,6 @@
 package com.xicheng.jvm.book.chapter02.code243;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,9 +14,8 @@ import java.util.List;
  * @author xichengxml
  * @date 2019-08-17 07:11
  */
+@Slf4j
 public class RuntimeConstantPoolOOM {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(RuntimeConstantPoolOOM.class);
 
     public static void main(String[] args) {
         // 使用list保持着常量池引用，避免Full GC回收常量池行为
@@ -25,7 +25,7 @@ public class RuntimeConstantPoolOOM {
         while (true) {
             String string = i++ + "";
             list.add(string);
-            LOGGER.info("still running, list: {}", list);
+            log.info("still running, list: {}", list);
         }
     }
 }

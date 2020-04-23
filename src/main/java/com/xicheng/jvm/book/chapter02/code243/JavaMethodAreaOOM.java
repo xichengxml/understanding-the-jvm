@@ -1,5 +1,6 @@
 package com.xicheng.jvm.book.chapter02.code243;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cglib.proxy.Enhancer;
@@ -16,9 +17,8 @@ import java.lang.reflect.Method;
  * @author xichengxml
  * @date 2019-08-17 07:48
  */
+@Slf4j
 public class JavaMethodAreaOOM {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(JavaMethodAreaOOM.class);
 
     public static void main(String[] args) {
         while (true) {
@@ -28,7 +28,7 @@ public class JavaMethodAreaOOM {
             enhancer.setCallback(new MethodInterceptor() {
                 @Override
                 public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
-                    LOGGER.info("still running...");
+                    log.info("still running...");
                     return methodProxy.invokeSuper(objects, args);
                 }
             });
